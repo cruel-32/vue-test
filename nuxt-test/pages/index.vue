@@ -10,7 +10,7 @@
       </h2>
       <div class="links">
         <a
-          href="/sub_one"
+          href="/user/abcd?a=1&b=2"
           class="button--green">sub_one test</a>
         <a
           href="https://nuxtjs.org/"
@@ -31,6 +31,10 @@ import AppLogo from '~/components/AppLogo.vue'
 export default {
   components: {
     AppLogo
+  },
+  transition: {
+    name: 'slide-right',
+    mode: 'out-in'
   }
 }
 </script>

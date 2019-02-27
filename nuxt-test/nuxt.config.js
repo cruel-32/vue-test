@@ -2,6 +2,10 @@ module.exports = {
   /*
   ** Headers of the page
   */
+  modules: [],
+  router: {
+    middleware: 'middleware_test'
+  },
   head: {
     title: 'nuxt-test',
     meta: [
@@ -13,6 +17,9 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  css : [
+    { src: '~assets/scss/main.scss', lang: 'scss'}
+  ],
   /*
   ** Customize the progress bar color
   */
@@ -24,6 +31,7 @@ module.exports = {
     /*
     ** Run ESLint on save
     */
+    vendor: ['axios','store'],
     extend (config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({
@@ -34,6 +42,9 @@ module.exports = {
         })
       }
     }
-  }
+  },
+  plugins: [
+    { src: '~plugins/vue-notifications', ssr: false }
+  ]
 }
 
