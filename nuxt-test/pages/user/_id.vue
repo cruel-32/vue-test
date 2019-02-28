@@ -25,6 +25,7 @@
                 {{user}}
             </div>
             <button v-on:click='getUser()'>비동기 테스트2</button>
+            <button v-on:click='getUsers()'>비동기 테스트3 (자체 api)</button>
         </div>
     </section>
 </template>
@@ -79,6 +80,10 @@ export default {
         async getUser(){
             const { data } = await axios.get('https://woc2.herokuapp.com/user'); 
             console.log('getUser : ', data);
+        },
+        async getUsers(){
+            const { data } = await axios.get('/api/users'); 
+            console.log('getUsers : ', data);
         }
     },
     head () {

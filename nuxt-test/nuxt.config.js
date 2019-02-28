@@ -50,6 +50,10 @@ module.exports = {
   },
   plugins: [
     { src: '~plugins/vue-notifications', ssr: false }
+  ],
+  serverMiddleware: [
+    // API middleware
+    '~/api/index.js'
   ]
 }
 
