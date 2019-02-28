@@ -40,7 +40,7 @@ export default {
     async asyncData ({ params, error, query }) {//callback 인자를 활용할 수도 있음.
         console.log('params : ', params);
         console.log('query : ', query);
-        const { data } = await axios.get('http://localhost:4000/user'); 
+        const { data } = await axios.get('https://woc2.herokuapp.com/user'); 
         const { dummy } = await new Promise((resolve,reject)=>{
         setTimeout(()=>{
             resolve({
@@ -65,7 +65,7 @@ export default {
         }
     },
     async fetch ({ store, params, query }) {
-        const { data } = await axios.get('http://localhost:4000/user'); 
+        const { data } = await axios.get('https://woc2.herokuapp.com/user'); 
         console.log('params : ', params);
         console.log('query : ', query);
         // store.commit('setUser', data)
@@ -77,8 +77,8 @@ export default {
     },
     methods: {
         async getUser(){
-            const { data } = await axios.get('http://localhost:4000/user'); 
-            console.log('getUser : ', data)
+            const { data } = await axios.get('https://woc2.herokuapp.com/user'); 
+            console.log('getUser : ', data);
         }
     },
     head () {

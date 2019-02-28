@@ -31,6 +31,11 @@ module.exports = {
     /*
     ** Run ESLint on save
     */
+    build: {
+      babel: {
+        presets: ['es2015', 'stage-0']
+      }
+    },
     vendor: ['axios','store'],
     extend (config, { isDev, isClient }) {
       if (isDev && isClient) {
