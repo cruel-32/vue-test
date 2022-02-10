@@ -17,7 +17,7 @@
     "cors": "^2.8.5",
     "express": "^4.16.4",
     "mongoose": "^5.4.17",
-    "node-sass": "^4.11.0",
+    "node-sass": "^7.0.0",
     "nuxt": "^2.0.0",
     "sass-loader": "^7.1.0",
     "vue-notifications": "^0.9.0"
