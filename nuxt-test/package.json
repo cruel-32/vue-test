@@ -15,7 +15,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "cors": "^2.8.5",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "mongoose": "^5.4.17",
     "node-sass": "^4.11.0",
     "nuxt": "^2.0.0",
